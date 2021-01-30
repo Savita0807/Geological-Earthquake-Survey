@@ -92,7 +92,7 @@ function createmap(earthquakes_data) {
   // console.log(info);
   // When the layer control is added, insert a div with the class of "info legend"
   legendinfo.onAdd = function(map) {
-    var div = L.DomUtil.create("div", "info legend");
+    var div = L.DomUtil.create("div", "info-legend");
         depths = [0,10,20,30,40,50];
         labels = []; 
 
