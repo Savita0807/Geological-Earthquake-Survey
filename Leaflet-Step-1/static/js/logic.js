@@ -88,21 +88,24 @@ function createmap(earthquakes_data) {
   };
 
   // Create a legend to display information about our map
-  var legendinfo = L.control({position: "bottomleft"});
+  var legendinfo = L.control({position: "bottomright"});
   // console.log(info);
   // When the layer control is added, insert a div with the class of "info legend"
   legendinfo.onAdd = function(map) {
-    var div = L.DomUtil.create("div", "info-legend");
+    var div = L.DomUtil.create("div", "info legend");
         depths = [0,10,20,30,40,50];
         labels = []; 
 
     // loop through our density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < depths.length; i++) {
       // console.log(depths[i])
-      div.innerHTML +=
+      div.innerHTML += 
+       labels.push(
           '<i style="background:' + getColor(depths[i] + 1) + '"></i> ' +
-          depths[i] + (depths[i + 1] ? '&ndash;' + depths[i + 1] + '<br>' : '+');
+          depths[i] + (depths[i + 1] ? '&ndash;' + depths[i + 1] + '<br>' : '+')
+      )
     }
+    div.innerHTML = labels.join('<br>');
     return div;
   };
   // Add the info legend to the map
