@@ -1,6 +1,6 @@
 # Geological-Earthquake-Survey- Visualizing Data with Leaflet
 
-Github page for this challenge:https://savita0807.github.io/Leaflet-challenge/Leaflet-Step-1/index.html
+Github page for this challenge:https://savita0807.github.io/Geological-Earthquake-Survey/Leaflet-Step-1/index.html
 
 ## Background
 
